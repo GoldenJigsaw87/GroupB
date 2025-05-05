@@ -1,0 +1,30 @@
+title User Stories
+
+Login Page->Owner: Login as Owner
+Owner->User: Promote to Admin
+User->Admin: Become Admin
+Owner->Admin: Demote a Admin
+Admin->User: Become User
+Owner->Owner: Create Badges
+Owner->Owner: Remove Badges
+Owner->Owner: Create Challenges
+Owner->Owner: Edit Challenges
+Owner->Owner: Remove Challenges
+Owner->User: Remove Badge
+Owner->User: Give Badge
+note left of User: Owner and Admin can give badges
+
+Login Page->Admin: Login as Admin
+Admin->User: Give Badge
+Admin->Admin: Create Challenges
+Admin->Admin: Edit Challenges
+Admin->Admin: Remove Challenges
+Admin->Admin: See Challenge Analytics
+Admin->User: See List of Users
+
+Login Page->User: Login as User
+User->User: Complete Challenge
+User->User: View Challenges
+User->User: View Badges as List or Grid
+User->User: Display Badges
+
