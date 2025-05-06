@@ -9,7 +9,7 @@ struct Footer: View {
     var body: some View {
         ZStack {
             Color.lightBlue.edgesIgnoringSafeArea(.all)
-            HStack{
+            HStack {
                 Spacer()
                 FooterButton(url: "Settings")
                 Spacer()
