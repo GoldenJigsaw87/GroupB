@@ -13,13 +13,18 @@ struct Footer: View {
                 Spacer()
                 FooterButton(url: "Settings")
                 Spacer()
-                FooterButton(url: "Home")
+                NavigationLink(destination: LessonsBoxes()) {
+                    FooterButton(url: "Home")
+                }
                 Spacer()
-                FooterButton(url: "Badge")
+                NavigationLink(destination: BadgePage()) {
+                    FooterButton(url: "Badge")
+                }
                 Spacer()
             }
         }
         .frame(width: .infinity, height: 50)
+        
     }
 }
 #Preview {
