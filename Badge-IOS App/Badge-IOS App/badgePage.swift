@@ -1,118 +1,52 @@
-//
-//  badgePage.swift
-//  Badge-IOS App
-//
-//  Created by Mark Jensen on 5/6/25.
-//
 
 import SwiftUI
 
 struct badgePage: View {
+    let columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 3)
+
     var body: some View {
-        HStack{
-            ZStack{
+        VStack(spacing: 20) {
+            // Top Bar
+            ZStack {
                 Rectangle()
                     .fill(Color.blue)
-                    .frame(width: 380, height: 80)
+                    .frame(height: 80)
                 Text("Badges")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.white)
             }
-        }
-        VStack{
+
+            // Title
             Text("What have you earned?")
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
+                .font(.headline)
+
+            // Badge Grid
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(0..<15, id: \.self) { _ in
+                    Rectangle()
+                        .fill(Color.gray)
+                        .frame(height: 80)
+                }
             }
+            .padding()
+
             Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-            }
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-            }
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-            }
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-            }
-            Spacer()
-        }
-        HStack{
-            ZStack{
+
+            // Bottom Bar
+            ZStack {
                 Rectangle()
                     .fill(Color.blue)
-                    .frame(width: 380, height: 80)
-                HStack{
+                    .frame(height: 80)
+                HStack(spacing: 40) {
                     Text("Settings Logo")
                     Text("Home Logo")
                     Text("Badges Logo")
                 }
+                .foregroundColor(.white)
             }
         }
+        .padding()
     }
 }
 
