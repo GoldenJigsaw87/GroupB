@@ -1,0 +1,12 @@
+.header {
+  width: 100vw;
+  height: 80px;
+  background-color: #68d0f3;
+}
+
+.challenges {
+  border: 3px solid black;
+  margin: 10px;
+  width: 30vw;
+}
+
