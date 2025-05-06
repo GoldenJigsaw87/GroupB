@@ -6,37 +6,6 @@
 //
 
 import SwiftUI
-struct LessonView: View {
-    var title: String
-    var progress: String?
-    var isLocked: Bool
-    
-    var body: some View {
-        VStack {
-            Text(title)
-                .font(.headline)
-                .foregroundColor(.white)
-            
-            if let progress = progress {
-                Text("Progress \(progress)")
-                    .font(.subheadline)
-                    .foregroundColor(.white)
-            } else if isLocked {
-                Image(systemName: "lock.fill")
-                    .foregroundColor(.white)
-                
-                
-                
-            }
-        }
-        .frame(width: 200, height: 80)
-        .background(Color.lightBlue)
-        .cornerRadius(10)
-        
-        
-        
-    }
-}
 
 struct LessonsBoxes: View {
     var body: some View {

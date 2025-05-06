@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct badgePage: View {
+struct BadgePage: View {
     var body: some View {
         Header(name: "Badges")
         VStack{
@@ -99,5 +99,5 @@ struct badgePage: View {
 }
 
 #Preview {
-    badgePage()
+    BadgePage()
 }
