@@ -1,31 +1,39 @@
-//
-//  badgePage.swift
-//  Badge-IOS App
-//
-//  Created by Mark Jensen on 5/6/25.
-//
-
 import SwiftUI
 
 struct BadgePage: View {
+    
+    var badges: [Badge] = [
+        Badge(url: "ChallengeStarter"),
+        Badge(url: "CommutlHelp"),
+        Badge(url: "CreativeThinker"),
+        Badge(url: "KnowledgeExplorer"),
+        Badge(url: "MasterOfTasks"),
+        Badge(url: "ScienceExplorer"),
+        Badge(url: "SpeedRunner"),
+        Badge(url: "TechTralblazer"),
+        Badge(url: "UltimateAchiever"),
+    ]
+    
     var body: some View {
-        VStack{
+        VStack {
             Header(name: "Badges")
+            
             ScrollView {
                 Text("What have you earned?")
+                    .font(.headline)
+                    .padding(.bottom)
                 
-                ForEach(0..<5){_ in
+                let rows = badges.chunked(into: 3)
+                
+                ForEach(0..<rows.count, id: \.self) { rowIndex in
                     HStack {
-                        ForEach(0..<3){_ in
-                            Rectangle()
-                                .fill(Color.gray)
-                                .frame(width: 80, height: 80)
-                                .padding(15)
-                            
+                        ForEach(rows[rowIndex], id: \.url) { badge in
+                            badge
                         }
                     }
                 }
             }
+            
             Footer()
         }
     }
