@@ -9,92 +9,25 @@ import SwiftUI
 
 struct BadgePage: View {
     var body: some View {
-        Header(name: "Badges")
         VStack{
-            Text("What have you earned?")
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
+            Header(name: "Badges")
+            ScrollView {
+                Text("What have you earned?")
+                
+                ForEach(0..<5){_ in
+                    HStack {
+                        ForEach(0..<3){_ in
+                            Rectangle()
+                                .fill(Color.gray)
+                                .frame(width: 80, height: 80)
+                                .padding(15)
+                            
+                        }
+                    }
+                }
             }
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-            }
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-            }
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-            }
-            Spacer()
-            HStack{
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(width: 80, height: 80)
-                Spacer()
-            }
-            Spacer()
+            Footer()
         }
-        Footer()
     }
 }
 
