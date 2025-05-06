@@ -9,14 +9,7 @@ import SwiftUI
 
 struct badgePage: View {
     var body: some View {
-        HStack{
-            ZStack{
-                Rectangle()
-                    .fill(Color.blue)
-                    .frame(width: 380, height: 80)
-                Text("Badges")
-            }
-        }
+        Header(name: "Badges")
         VStack{
             Text("What have you earned?")
             Spacer()
@@ -101,18 +94,7 @@ struct badgePage: View {
             }
             Spacer()
         }
-        HStack{
-            ZStack{
-                Rectangle()
-                    .fill(Color.blue)
-                    .frame(width: 380, height: 80)
-                HStack{
-                    Text("Settings Logo")
-                    Text("Home Logo")
-                    Text("Badges Logo")
-                }
-            }
-        }
+        Footer()
     }
 }
 

@@ -13,6 +13,7 @@ struct FooterButton: View {
             Image(url)
                 .resizable()
                 .frame(width: 44, height: 44)
+                .padding(.top, 20)
         }
     }
 }

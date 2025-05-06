@@ -10,13 +10,13 @@ struct LessonView: View {
     var title: String
     var progress: String?
     var isLocked: Bool
-
+    
     var body: some View {
         VStack {
             Text(title)
                 .font(.headline)
                 .foregroundColor(.white)
-
+            
             if let progress = progress {
                 Text("Progress \(progress)")
                     .font(.subheadline)
@@ -40,8 +40,8 @@ struct LessonView: View {
 
 struct LessonsBoxes: View {
     var body: some View {
+        Header(name: "Home")
         VStack(spacing: 20) {
-            
             
             Spacer().frame(height: 10)
             
@@ -63,20 +63,14 @@ struct LessonsBoxes: View {
                 
                 Image(systemName: "arrow.down")
                     .font(.title)
-                
-                
-                
-                
-                
             }
             
             Spacer()
-            
-            
         }
-           }
-       }
-    
+        Footer()
+    }
+}
+
 
 
 #Preview {
