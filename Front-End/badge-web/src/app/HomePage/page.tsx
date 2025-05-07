@@ -1,6 +1,9 @@
 import styles from "./page.module.css";
 import Challenge from "./Components/challenges";
 import User from "./Components/user";
+import AddUser from "./Components/addUser";
+import Grid from "./Components/grid/grid";
+import AddBadge from "./Components/addBadge";
 
 export default function HomePage() {
     return (
@@ -9,7 +12,7 @@ export default function HomePage() {
 
             </header>
             <section style={{display: "flex"}}>
-                <section>
+                <section style={{display: "flex", flexDirection: "column"}}>
                     <div className={styles.challenges}>
                         <Challenge name="John" description="He's Red"></Challenge>
                         <Challenge name="Dutch" description="He Plans"></Challenge>
@@ -20,10 +23,19 @@ export default function HomePage() {
                         <button>Add</button>
                     </div>
                 </section>
-                <div className={styles.challenges}>
-                    <User firstName="Karson" lastName="Mellott"></User>
-                    <User firstName="Karson" lastName="Mellott"></User>
-                </div>
+                <section style={{display: "flex", flexDirection: "column"}}>
+                    <div className={styles.challenges}>
+                        <Grid></Grid>
+                    </div>
+                    <AddBadge></AddBadge>
+                </section>
+                <section style={{display: "flex", flexDirection: "column"}}>
+                    <div className={styles.challenges}>
+                        <User firstName="Karson" lastName="Mellott"></User>
+                        <User firstName="Karson" lastName="Mellott"></User>
+                    </div>
+                    <AddUser></AddUser>
+                </section>
             </section>
         </div>
     );
