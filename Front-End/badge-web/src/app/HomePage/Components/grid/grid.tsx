@@ -12,12 +12,11 @@
 
 import styles from './page.module.css';
 
-export default function Home() {
+export default function Grid() {
   const badges = Array(12).fill(null); // Example: 12 badges
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>Your Badges</h1>
       <div className={styles.grid}>
         {badges.map((_, index) => (
           <div key={index} className={styles.badge}>
