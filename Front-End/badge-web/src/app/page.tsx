@@ -5,7 +5,7 @@ export default function DenoBase(){
   const [username, setUsername] = useState("")
   function logIn() {
     if (username){ // Check if username is right
-      alert('yippe')
+      window.location.href = "http://localhost:3000/HomePage"
     }else{
       alert('failure')
     }
