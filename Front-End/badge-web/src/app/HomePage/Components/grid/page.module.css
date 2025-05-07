@@ -1,20 +1,19 @@
 .container {
   padding: 10px;
 }
-  
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(67px, 1fr));
 }
-  
+
 .badge {
   background-color: #ccc;
   height: 67px;
-  width: 67px;
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
 }
-  
