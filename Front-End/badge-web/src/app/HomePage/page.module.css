@@ -10,3 +10,24 @@
   width: 30vw;
 }
 
+.add{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 30vw;
+}
+.add input, .add textarea{
+  width: 25vw;
+  margin: 7px;
+}
+.add :nth-child(2){
+  height: 70px;
+}
+.add :nth-child(3){
+  position: absolute;
+  top: 130px;
+  right: 30px;
+}

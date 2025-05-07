@@ -10,9 +10,20 @@ export default function HomePage() {
 
             </header>
             <section style={{display: "flex"}}>
+                <section>
+                    <div className={styles.challenges}>
+                        <Challenge name="John" description="He's Red"></Challenge>
+                        <Challenge name="Dutch" description="He Plans"></Challenge>
+                    </div>
+                    <div className={styles.add}>
+                        <input type="text" placeholder="Name"/>
+                        <textarea placeholder="Desc" style={{resize:'none'}}></textarea>
+                        <button>Add</button>
+                    </div>
+                </section>
                 <div className={styles.challenges}>
-                    <Challenge name="John" description="He's Red"></Challenge>
-                    <Challenge name="Dutch" description="He Plans"></Challenge>
+                    <User firstName="Karson" lastName="Mellott"></User>
+                    <User firstName="Karson" lastName="Mellott"></User>
                 </div>
                 <section style={{display: "flex", flexDirection: "column"}}>
                     <div className={styles.challenges}>
